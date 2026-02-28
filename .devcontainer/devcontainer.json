@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pramila Electricals | 11kV Equipment Supplier</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+header{
+    background:#0B3C88;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    color:white;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+.hero{
+    background:linear-gradient(rgba(11,60,136,0.85),rgba(11,60,136,0.85)),
+    url('https://images.unsplash.com/photo-1581091870627-3d4a0f43a1b2?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.btn{
+    padding:12px 25px;
+    background:#FFA500;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
+}
+
+.section{
+    padding:60px 50px;
+    text-align:center;
+}
+
+.section h2{
+    margin-bottom:30px;
+    color:#0B3C88;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.contact{
+    background:#0B3C88;
+    color:white;
+}
+
+footer{
+    background:#001f4d;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Pramila Electricals</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h2>Trusted 11kV Electrical Equipment Supplier</h2>
+    <p>Powering Industries with Reliable and Safe Electrical Solutions</p>
+    <a href="tel:9026080980" class="btn">Call Now</a>
+</section>
+
+<section class="section" id="about">
+    <h2>About Us</h2>
+    <p>
+        Pramila Electricals is a trusted supplier of 11kV electrical equipment 
+        located in Ayodhyapuri Colony, Sant Ravidas Nagar, Bhadohi (221401).
+        We specialize in industrial-grade electrical components for safe 
+        and efficient power distribution systems.
+    </p>
+</section>
+
+<section class="section" id="products">
+    <h2>Our Products</h2>
+    <div class="products">
+
+        <div class="card">
+            <h3>CT & PT (11kV)</h3>
+            <p>High-accuracy transformers for protection and metering systems.</p>
+        </div>
+
+        <div class="card">
+            <h3>Cable Box (11kV)</h3>
+            <p>Indoor and outdoor cable termination solutions.</p>
+        </div>
+
+        <div class="card">
+            <h3>AB Switch (11kV)</h3>
+            <p>Reliable air break switches for safe power isolation.</p>
+        </div>
+
+        <div class="card">
+            <h3>Aluminium Lugs</h3>
+            <p>Durable corrosion-resistant connectors.</p>
+        </div>
+
+        <div class="card">
+            <h3>Copper Lugs (On Demand)</h3>
+            <p>Heavy-duty premium quality connectors as per requirement.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section contact" id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> 9026080980</p>
+    <p><strong>Email:</strong> shashankmaurya025@gmail.com</p>
+    <p><strong>Address:</strong> Ayodhyapuri Colony, Sant Ravidas Nagar, Bhadohi – 221401</p>
+</section>
+
+<footer>
+    © 2026 Pramila Electricals | All Rights Reserved
+</footer>
+
+</body>
+</html>
