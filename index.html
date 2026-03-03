@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pramila Electricals | 11KV Electrical Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#f8f9fa;color:#333;line-height:1.6}
+header{background:linear-gradient(135deg,#0a3d62,#07407a),url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1920') center/cover;background-blend-mode:overlay;color:#fff;padding:100px 20px 80px}
+header img{width:120px;margin-bottom:15px;border-radius:10px;background:#fff;padding:10px}
+header h1{font-size:42px;margin-bottom:10px}
+header p{margin-top:10px;font-size:20px;opacity:.95}
+.btn{display:inline-block;margin:15px 10px 0;background:#ff9800;color:#fff;padding:14px 30px;border-radius:30px;text-decoration:none;font-weight:600;transition:.3s}
+.btn:hover{background:#e68900;transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,.2)}
+.btn-secondary{background:#fff;color:#0a3d62}
+.btn-secondary:hover{background:#f0f0f0}
+nav{background:#fff;text-align:center;padding:20px;box-shadow:0 2px 15px rgba(0,0,0,.08);position:sticky;top:0;z-index:1000}
+nav a{margin:0 25px;text-decoration:none;color:#0a3d62;font-weight:600;font-size:15px;transition:.3s;position:relative}
+nav a:hover{color:#ff9800}
+nav a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:#ff9800;transition:.3s}
+nav a:hover::after{width:100%}
+
+/* Hero Section */
+.hero{background:linear-gradient(rgba(10,61,98,0.85),rgba(7,64,122,0.85)),url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1920') center/cover;background-blend-mode:overlay;padding:80px 20px;text-align:center;color:#fff}
+.hero h2{font-size:36px;margin-bottom:15px;color:#fff}
+.hero p{font-size:18px;max-width:700px;margin:0 auto 25px;opacity:.9;color:#fff}
+
+/* Stats Section */
+.stats{background:linear-gradient(135deg,#0a3d62,#07407a);padding:50px 20px;color:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;max-width:1100px;margin:auto;text-align:center}
+.stat-item i{font-size:40px;color:#ff9800;margin-bottom:15px}
+.stat-item h3{font-size:42px;font-weight:700}
+.stat-item p{font-size:16px;opacity:.9}
+
+/* About Section */
+section{padding:80px 20px;max-width:1200px;margin:auto}
+h2{text-align:center;color:#0a3d62;margin-bottom:40px;font-size:32px;position:relative}
+h2::after{content:'';display:block;width:60px;height:4px;background:#ff9800;margin:15px auto 0;border-radius:2px}
+.about-content{display:flex;flex-wrap:wrap;gap:40px;align-items:center}
+.about-text{flex:1;min-width:300px}
+.about-image{flex:1;min-width:300px}
+.about-image img{width:100%;border-radius:15px;box-shadow:0 15px40px rgba(0,0,0,.15)}
+
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:40px}
+.about-card{background:#fff;padding:30px;border-radius:15px;box-shadow:0 5px20px rgba(0,0,0,.08);text-align:center;transition:.3s}
+.about-card:hover{transform:translateY(-10px)}
+.about-card i{font-size:40px;color:#ff9800;margin-bottom:20px}
+.about-card h3{color:#0a3d62;margin-bottom:10px}
+
+/* Services Section */
+.services{background:#f0f4f8}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.service-card{background:#fff;padding:40px 30px;border-radius:15px;box-shadow:0 5px20px rgba(0,0,0,.08);text-align:center;transition:.3s}
+.service-card:hover{transform:translateY(-10px);box-shadow:0 15px40px rgba(0,0,0,.12)}
+.service-card i{font-size:50px;color:#0a3d62;margin-bottom:25px}
+.service-card h3{color:#0a3d62;margin-bottom:15px;font-size:20px}
+.service-card p{color:#666;font-size:15px}
+
+/* Products Section */
+.products{background:#fff}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.product-card{background:#fff;padding:0;border-radius:15px;box-shadow:0 5px20px rgba(0,0,0,.08);transition:.3s;overflow:hidden;text-align:center}
+.product-card:hover{transform:translateY(-10px);box-shadow:0 20px40px rgba(0,0,0,.15)}
+.product-card img{width:100%;height:220px;object-fit:cover;transition:.3s}
+.product-card:hover img{transform:scale(1.1)}
+.product-card-content{padding:25px}
+.product-card h3{color:#0a3d62;margin-bottom:8px;font-size:18px}
+.product-card p{color:#666;font-size:14px}
+
+/* Why Choose Us */
+.why-choose{background:linear-gradient(135deg,#0a3d62,#07407a);color:#fff}
+.why-choose h2{color:#fff}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
+.why-card{background:rgba(255,255,255,.1);padding:35px;border-radius:15px;text-align:center;transition:.3s}
+.why-card:hover{background:rgba(255,255,255,.15);transform:translateY(-5px)}
+.why-card i{font-size:45px;color:#ff9800;margin-bottom:20px}
+.why-card h3{margin-bottom:15px;font-size:20px}
+.why-card p{opacity:.9;font-size:15px}
+
+/* Contact Section */
+.contact{background:#f0f4f8}
+.contact-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}
+.contact-info{background:#fff;padding:40px;border-radius:15px;box-shadow:0 5px20px rgba(0,0,0,.08)}
+.contact-info h3{color:#0a3d62;margin-bottom:25px;font-size:22px}
+.contact-item{display:flex;align-items:center;margin-bottom:20px}
+.contact-item i{width:50px;height:50px;background:#0a3d62;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px}
+.contact-item div{padding-left:15px}
+.contact-item strong{display:block;color:#0a3d62}
+.contact-item span{color:#666;font-size:14px}
+.contact-form{background:#fff;padding:40px;border-radius:15px;box-shadow:0 5px20px rgba(0,0,0,.08)}
+.contact-form h3{color:#0a3d62;margin-bottom:25px;font-size:22px}
+form input,form textarea{width:100%;padding:15px;margin:12px 0;border-radius:8px;border:1px solid #ddd;font-family:inherit;font-size:15px;transition:.3s}
+form input:focus,form textarea:focus{outline:none;border-color:#0a3d62;box-shadow:0 0 0 3px rgba(10,61,98,.1)}
+form button{background:#ff9800;color:#fff;padding:16px 35px;border:none;border-radius:30px;cursor:pointer;font-size:16px;font-weight:600;transition:.3s;width:100%}
+form button:hover{background:#e68900;transform:translateY(-2px)}
+.map-container{background:#fff;padding:15px;border-radius:15px;box-shadow:0 5px20px rgba(0,0,0,.08);margin-top:40px}
+iframe{width:100%;border-radius:10px;height:350px}
+
+/* Footer */
+footer{background:#0a3d62;color:#fff;text-align:center;padding:40px 20px}
+.footer-content{max-width:1100px;margin:auto}
+.footer-logo{font-size:28px;font-weight:700;margin-bottom:15px}
+.footer-links{margin:20px 0}
+.footer-links a{color:#fff;margin:0 15px;text-decoration:none;opacity:.8;transition:.3s}
+.footer-links a:hover{opacity:1;color:#ff9800}
+.social-links{margin:20px 0}
+.social-links a{color:#fff;margin:0 12px;font-size:22px;transition:.3s}
+.social-links a:hover{color:#ff9800;transform:translateY(-3px)}
+.copyright{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;margin-top:20px;opacity:.7;font-size:14px}
+
+/* WhatsApp Float */
+.whatsapp{position:fixed;bottom:25px;right:25px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;box-shadow:0 5px20px rgba(37,211,102,.4);z-index:1000;transition:.3s}
+.whatsapp:hover{transform:translateY(-5px);box-shadow:0 10px30px rgba(37,211,102,.5)}
+
+/* Responsive */
+@media(max-width:768px){
+header h1{font-size:28px}
+nav a{display:block;margin:12px 0}
+.hero h2{font-size:26px}
+.stats-grid{grid-template-columns:repeat(2,1fr)}
+.stat-item h3{font-size:32px}
+section{padding:50px 20px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<img src="https://lh3.googleusercontent.com/a-/ALV-UjU_Qzax9D_G3ifG1LvH0O-0wsibq4MRMTYKCZZ_W70RzDTf8lI=s265-w265-h265" alt="Pramila Electricals Logo">
+<h1>Pramila Electricals</h1>
+<p>Trusted Supplier of 11KV Electrical Equipment & Solutions</p>
+<a href="tel:9026080980" class="btn"><i class="fas fa-phone"></i> Call Now</a>
+<a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Get Quote</a>
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#products">Products</a>
+<a href="#why-choose">Why Choose Us</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+<h2>Powering Industries with Quality Electrical Solutions</h2>
+<p>Leading supplier of 11KV electrical equipment, transformers, and industrial electrical components across India. Quality products with reliable service.</p>
+<a href="#products" class="btn">View Products</a>
+<a href="#contact" class="btn btn-secondary">Contact Us</a>
+</section>
+
+<!-- Stats Section -->
+<section class="stats">
+<div class="stats-grid">
+<div class="stat-item">
+<i class="fas fa-industry"></i>
+<h3>15+</h3>
+<p>Years Experience</p>
+</div>
+<div class="stat-item">
+<i class="fas fa-users"></i>
+<h3>500+</h3>
+<p>Happy Clients</p>
+</div>
+<div class="stat-item">
+<i class="fas fa-boxes"></i>
+<h3>50+</h3>
+<p>Products</p>
+</div>
+<div class="stat-item">
+<i class="fas fa-handshake"></i>
+<h3>100%</h3>
+<p>Quality Assured</p>
+</div>
+</div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+<h2>About Us</h2>
+<div class="about-content">
+<div class="about-text">
+<p style="font-size:17px;margin-bottom:20px">
+Pramila Electricals is a trusted name in the electrical equipment industry, specializing in high-quality 11KV electrical components and solutions. Based in Sant Ravidas Nagar (Bhadohi), we have been serving industrial clients across India with reliable, safety-certified electrical products.</p>
+<p style="font-size:17px;margin-bottom:20px">
+Our commitment to quality, competitive pricing, and timely delivery has made us a preferred choice for electrical contractors, industries, and infrastructure projects. We source our products from reputed manufacturers ensuring durability and compliance with industry standards.</p>
+<p style="font-size:17px">
+Whether you need CT/PT units, cable boxes, AB switches, or custom electrical solutions, we provide expert guidance and comprehensive support for all your electrical requirements.
+</p>
+</div>
+<div class="about-image">
+<img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800" alt="Electrical Workshop">
+</div>
+</div>
+<div class="about-grid">
+<div class="about-card">
+<i class="fas fa-certificate"></i>
+<h3>ISO Certified</h3>
+<p>All products meet international quality standards</p>
+</div>
+<div class="about-card">
+<i class="fas fa-shipping-fast"></i>
+<h3>Fast Delivery</h3>
+<p>Quick and safe delivery across India</p>
+</div>
+<div class="about-card">
+<i class="fas fa-headset"></i>
+<h3>24/7 Support</h3>
+<p>Dedicated customer support team</p>
+</div>
+</div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+<h2>Our Services</h2>
+<div class="services-grid">
+<div class="service-card">
+<i class="fas fa-tools"></i>
+<h3>Product Supply</h3>
+<p>Supply of certified 11KV electrical equipment including CT/PT, cable boxes, AB switches, and accessories</p>
+</div>
+<div class="service-card">
+<i class="fas fa-cogs"></i>
+<h3>Installation Support</h3>
+<p>Technical guidance and support for proper installation of electrical equipment</p>
+</div>
+<div class="service-card">
+<i class="fas fa-wrench"></i>
+<h3>Maintenance Services</h3>
+<p>Regular maintenance and inspection services for electrical infrastructure</p>
+</div>
+<div class="service-card">
+<i class="fas fa-lightbulb"></i>
+<h3>Technical Consultation</h3>
+<p>Expert advice on product selection and electrical system optimization</p>
+</div>
+<div class="service-card">
+<i class="fas fa-clipboard-check"></i>
+<h3>Quality Testing</h3>
+<p>Pre-delivery testing and certification of all electrical components</p>
+</div>
+<div class="service-card">
+<i class="fas fa-truck-loading"></i>
+<h3>Bulk Orders</h3>
+<p>Special pricing and logistics support for large industrial orders</p>
+</div>
+</div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="products">
+<h2>Our Products</h2>
+<div class="products-grid">
+
+<div class="product-card">
+<img src="https://th.bing.com/th/id/OIP.Qj3W0PEUwydKimzEwSg_vgHaHa?w=219&h=220&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Current Transformer 11KV">
+<div class="product-card-content">
+<h3>Current Transformer (CT) 11KV</h3>
+<p>High-quality resin cast current transformers for measurement and protection in 11KV applications</p>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://th.bing.com/th/id/OIP.YFecWHPoLTGtpl3-RDVjtwHaFj?w=239&h=196&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Potential Transformer 11KV">
+<div class="product-card-content">
+<h3>Potential Transformer (PT) 11KV</h3>
+<p>Resin insulated potential transformers for voltage measurement and metering applications</p>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://www.bing.com/th/id/OIP.XZ07pxg6cFoni7ue7RuEVAHaHa?w=129&h=128&c=8&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="11 KV Indoor Cable Box">
+<div class="product-card-content">
+<h3>11 KV Indoor Cable Box</h3>
+<p>Heavy-duty indoor cable termination boxes for safe and secure electrical connections</p>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://tse1.explicit.bing.net/th/id/OIP.sdwsqHkdq-PFXwoSthSlRwAAAA?pid=ImgDet&w=184&h=255&c=7&dpr=1.3&o=7&rm=3" alt="11KV Outdoor Cable Box">
+<div class="product-card-content">
+<h3>11KV Outdoor Cable Box</h3>
+<p>Weather-resistant outdoor cable boxes suitable for harsh environmental conditions</p>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://th.bing.com/th/id/OIP.KE4V_Ikfxjlidxo5RWFh2wHaHa?w=175&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Cable Lugs Long Barrel">
+<div class="product-card-content">
+<h3>Cable Lugs Long Barrel</h3>
+<p>High-quality aluminium and copper cable lugs for secure and durable terminations</p>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://th.bing.com/th/id/OIP.FzbWcbEy1KAv9p9N_y01NQHaHY?w=206&h=205&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="11KV AB Switch">
+<div class="product-card-content">
+<h3>11KV AB Switch</h3>
+<p>Air Break switches for reliable load switching operations in distribution systems</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Why Choose Us -->
+<section id="why-choose" class="why-choose">
+<h2>Why Choose Us</h2>
+<div class="why-grid">
+<div class="why-card">
+<i class="fas fa-award"></i>
+<h3>Quality Assured</h3>
+<p>All products are certified and tested for safety, durability, and performance</p>
+</div>
+<div class="why-card">
+<i class="fas fa-tags"></i>
+<h3>Competitive Pricing</h3>
+<p>Best market rates without compromising on quality</p>
+</div>
+<div class="why-card">
+<i class="fas fa-clock"></i>
+<h3>Timely Delivery</h3>
+<p>Fast and reliable delivery across all major cities in India</p>
+</div>
+<div class="why-card">
+<i class="fas fa-user-tie"></i>
+<h3>Expert Team</h3>
+<p>Experienced professionals to guide you through product selection</p>
+</div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+<div class="contact-content">
+<div class="contact-info">
+<h3>Get In Touch</h3>
+<div class="contact-item">
+<i class="fas fa-phone"></i>
+<div>
+<strong>Phone</strong>
+<span>+91 9026080980</span>
+</div>
+</div>
+<div class="contact-item">
+<i class="fas fa-envelope"></i>
+<div>
+<strong>Email</strong>
+<span>shashankmaurya025@gmail.com</span>
+</div>
+</div>
+<div class="contact-item">
+<i class="fas fa-map-marker-alt"></i>
+<div>
+<strong>Address</strong>
+<span>Ayodhyapuri Colony, Sant Ravidas Nagar (Bhadohi), Uttar Pradesh 221401</span>
+</div>
+</div>
+<div class="contact-item">
+<i class="fas fa-clock"></i>
+<div>
+<strong>Business Hours</strong>
+<span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+</div>
+</div>
+</div>
+<div class="contact-form">
+<h3>Send Us a Message</h3>
+<form action="mailto:shashankmaurya025@gmail.com" method="post" enctype="text/plain">
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="email" name="Email" placeholder="Your Email" required>
+<input type="tel" name="Phone" placeholder="Your Phone Number">
+<textarea name="Message" rows="5" placeholder="Your Message / Inquiry" required></textarea>
+<button type="submit"><i class="fas fa-paper-plane"></i> Send Inquiry</button>
+</form>
+</div>
+</div>
+<div class="map-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.5!2d82.5!3d25.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398542f7c7c0d4d1%3A0xabcdef1234567890!2sAyodhyapuri%20Colony%2C%20Sant%20Ravidas%20Nagar%2C%20Bhadohi%2C%20Uttar%20Pradesh%20221401!5e0!3m2!1sen!2sin!4v1609459200000" width="600" height="350" style="border:0;width:100%" allowfullscreen loading="lazy"></iframe>
+</div>
+</section>
+
+<footer>
+<div class="footer-content">
+<div class="footer-logo">Pramila Electricals</div>
+<p>Your Trusted Partner for 11KV Electrical Solutions</p>
+<div class="social-links">
+<a href="tel:9026080980"><i class="fas fa-phone"></i></a>
+<a href="mailto:shashankmaurya025@gmail.com"><i class="fas fa-envelope"></i></a>
+<a href="https://wa.me/919026080980"><i class="fab fa-whatsapp"></i></a>
+</div>
+<div class="footer-links">
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
+</div>
+<div class="copyright">
+© 2026 Pramila Electricals. All Rights Reserved.
+</div>
+</div>
+</footer>
+
+<a href="https://wa.me/919026080980" class="whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
